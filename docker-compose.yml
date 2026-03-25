@@ -41,7 +41,7 @@ services:
     ports:
       - '3000:3000'
     environment:
-      ALLOW_EDITING: "true"
+      ALLOW_EDITING: true
       AAS_REGISTRY_PATH: http://localhost:8082/shell-descriptors
       SUBMODEL_REGISTRY_PATH: http://localhost:8083/submodel-descriptors
       AAS_REPO_PATH: http://localhost:8081/shells
