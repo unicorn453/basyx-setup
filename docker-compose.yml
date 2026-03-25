@@ -22,7 +22,6 @@ services:
       - '8082:8080'
     environment:
       - SERVER_PORT=8080
-      - ALLOW_EDITING=true
     volumes:
       - ./basyx/aas-registry.yml:/workspace/config/application.yml
     restart: always
@@ -42,6 +41,7 @@ services:
     ports:
       - '3000:3000'
     environment:
+      ALLOW_EDITING: "true"
       AAS_REGISTRY_PATH: http://localhost:8082/shell-descriptors
       SUBMODEL_REGISTRY_PATH: http://localhost:8083/submodel-descriptors
       AAS_REPO_PATH: http://localhost:8081/shells
